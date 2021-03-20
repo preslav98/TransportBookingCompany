@@ -2,6 +2,7 @@ package com.endava;
 
 import com.endava.Company.Bookings;
 import com.endava.Vehicle.Bus.Bus;
+import com.endava.Vehicle.Vehicle;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
@@ -10,7 +11,7 @@ import java.util.Scanner;
 
 public class ConsoleMenu {
     private static final Bookings booking = new Bookings();
-    private static Bus bus = new Bus();
+    private static Vehicle bus = new Bus();
 
     public static void displayMenu() {
         Scanner choose = new Scanner(System.in);
