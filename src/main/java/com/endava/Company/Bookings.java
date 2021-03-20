@@ -4,14 +4,12 @@ import com.endava.Vehicle.Vehicle;
 
 public class Bookings {
     private Vehicle vehicle;
-    //private int passengersCount;
     private String startPoint;
     private String endPoint;
     private double price;
     private double distance;
     final static double OVER_PRICE = 1;
     final static double TAX_RATE = 0.2;
-
 
     public Bookings() {
     }

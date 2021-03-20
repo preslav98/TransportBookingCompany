@@ -11,7 +11,11 @@ import java.util.Scanner;
 
 public class ConsoleMenu {
     private static final Bookings booking = new Bookings();
-    private static Vehicle bus = new Bus();
+
+    private static void setBookingVehicle(){
+        Vehicle bus = VehiclePOJOFactory.createBus("src/main/resources/vehicles.json");
+        booking.setVehicle(bus);
+    }
 
     public static void displayMenu() {
         Scanner choose = new Scanner(System.in);
@@ -23,15 +27,12 @@ public class ConsoleMenu {
             switch (choice) {
                 case 1:
                     ConsoleMenu.option1();
-
                     break;
                 case 2:
-                    readBusInfo();
+                    setBookingVehicle();
                     System.out.println(booking.getVehicle());
-
                     break;
                 case 3:
-
                     break;
                 default:
                     System.out.println("Please enter a number between 1 and 3.");
@@ -43,9 +44,8 @@ public class ConsoleMenu {
         }
     }
 
-
     public static void option1() {
-        readBusInfo();
+        setBookingVehicle();
         Scanner choose = new Scanner(System.in);
         System.out.println("Enter start point");
         String startP = choose.next();
@@ -57,21 +57,6 @@ public class ConsoleMenu {
         booking.calcPrice();
         System.out.println("You successfully booked a ticket. Booking info:");
         System.out.println(booking + "\n");
-
-    }
-
-    public static void readBusInfo() {
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            bus = objectMapper.readValue(new File("src/main/resources/vehicles.json"), Bus.class);
-
-            booking.setVehicle(bus);
-
-        } catch (Exception e) {
-            System.out.println("File missing.");
-
-        }
 
     }
 }
