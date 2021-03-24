@@ -7,9 +7,6 @@ import java.util.Objects;
 
 public class Car extends Vehicle {
 
-    public Car(Brand brand, int capacity, double fuelUsage) {
-        super(brand, capacity, fuelUsage);
-    }
 
     @Override
     public String toString() {

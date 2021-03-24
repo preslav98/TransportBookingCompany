@@ -2,15 +2,11 @@ package com.endava.vehicle.plane;
 
 import com.endava.enums.Brand;
 import com.endava.vehicle.Vehicle;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 
 public class Plane extends Vehicle {
-
-
-    public Plane(Brand brand, int capacity, double fuelUsage) {
-        super(brand, capacity, fuelUsage);
-    }
 
     @Override
     public String toString() {

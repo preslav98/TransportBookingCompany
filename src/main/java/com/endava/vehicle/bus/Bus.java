@@ -2,6 +2,7 @@ package com.endava.vehicle.bus;
 
 import com.endava.enums.Brand;
 import com.endava.vehicle.Vehicle;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 
@@ -9,9 +10,6 @@ import java.util.Objects;
 public class Bus extends Vehicle {
 
 
-    public Bus(Brand brand, int capacity, double fuelUsage) {
-        super(brand, capacity, fuelUsage);
-    }
 
     @Override
     public String toString() {

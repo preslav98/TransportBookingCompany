@@ -2,13 +2,16 @@ package com.endava.vehicle;
 
 import com.endava.enums.Brand;
 
-import java.util.Objects;
+
+
 
 public abstract class Vehicle {
-    private final Brand brand ;
-    private final int capacity;
-    private final double fuelUsage;
+    private Brand brand ;
+    private int capacity;
+    private double fuelUsage;
 
+    public Vehicle() {
+    }
 
     public Vehicle(Brand brand, int capacity, double fuelUsage) {
         this.brand = brand;
