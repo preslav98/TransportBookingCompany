@@ -1,9 +1,0 @@
-com\endava\App.class
-com\endava\Vehicle\Vehicle.class
-com\endava\enums\Brand.class
-com\endava\Company\Company.class
-com\endava\Vehicle\Bus\Bus.class
-com\endava\Vehicle\Plane\Plane.class
-com\endava\Company\GetDistanceUtil.class
-com\endava\Company\Bookings.class
-com\endava\Vehicle\Car\Car.class
