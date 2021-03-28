@@ -13,8 +13,8 @@ public class App {
 
     public static void main(String[] args) throws InterruptedException, IOException {
         //ConsoleMenu.displayMenu();
-        AirportParking parking= new AirportParking();
-        AirportParkingManagement management= new AirportParkingManagement(parking);
+        AirportParking parking = new AirportParking();
+        AirportParkingManagement management = new AirportParkingManagement(parking);
         Vehicle bus = VehiclePOJOFactory.createBus("src/main/resources/vehicles.json");
         management.checkIn(bus, "Ivan");
         Thread.sleep(10000);

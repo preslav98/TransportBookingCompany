@@ -1,9 +1,6 @@
 package com.endava.vehicle.car;
 
-import com.endava.enums.Brand;
 import com.endava.vehicle.Vehicle;
-
-import java.util.Objects;
 
 public class Car extends Vehicle {
 
@@ -13,6 +10,7 @@ public class Car extends Vehicle {
         return "The car is a " + super.getBrand() +
                 " with capacity of " + super.getCapacity();
     }
+
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Car)) return false;

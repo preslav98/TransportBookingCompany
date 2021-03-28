@@ -2,13 +2,15 @@ package com.endava.parking;
 
 import com.endava.vehicle.Vehicle;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class AirportParking {
     private final static int CAPACITY = 100;
     private Map<Vehicle, String> vehicleOwner = new HashMap<>();
     private List<Vehicle> parking = new ArrayList<Vehicle>(100);
-
 
 
     public AirportParking() {

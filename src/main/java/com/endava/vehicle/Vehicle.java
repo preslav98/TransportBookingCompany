@@ -3,10 +3,8 @@ package com.endava.vehicle;
 import com.endava.enums.Brand;
 
 
-
-
 public abstract class Vehicle {
-    private Brand brand ;
+    private Brand brand;
     private int capacity;
     private double fuelUsage;
 
@@ -29,7 +27,9 @@ public abstract class Vehicle {
         return capacity;
     }
 
-    public double getFuelUsage() { return fuelUsage; }
+    public double getFuelUsage() {
+        return fuelUsage;
+    }
 
 //
 //    public boolean equals(Object o) {

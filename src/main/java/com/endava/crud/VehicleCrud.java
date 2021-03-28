@@ -12,8 +12,6 @@ public class VehicleCrud {
         String sql = "INSERT INTO vehicles (brand, capacity, fuel_usage) VALUES (?, ?, ?)";
 
         try {
-
-
             Connection connection = new ConnectionFactory().createConnection();
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, vehicle.getBrand().name());
@@ -21,8 +19,7 @@ public class VehicleCrud {
             statement.setDouble(3, vehicle.getFuelUsage());
             statement.executeUpdate();
             connection.close();
-
-        }catch (java.sql.SQLException exception){
+        } catch (java.sql.SQLException exception) {
             System.err.println(exception.getMessage());
         }
     }

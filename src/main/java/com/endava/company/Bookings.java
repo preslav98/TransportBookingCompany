@@ -63,9 +63,9 @@ public class Bookings {
 
     public void calcPrice() {
         double fuelPricePerLiter = 2.25;
-        double thePrice = (vehicle.getFuelUsage() * (distance / 100))*fuelPricePerLiter;
+        double thePrice = (vehicle.getFuelUsage() * (distance / 100)) * fuelPricePerLiter;
         double finalPrice = (thePrice + (thePrice * OVER_PRICE)) / vehicle.getCapacity();
-        price = finalPrice + (finalPrice* TAX_RATE);
+        price = finalPrice + (finalPrice * TAX_RATE);
     }
 
     @Override
@@ -74,7 +74,7 @@ public class Bookings {
                 + vehicle +
                 ", Departs from ='" + startPoint + '\'' +
                 ", Arriving in ='" + endPoint + '\'' +
-                ", price=" + String.format("%.2f", price) +"lv. "+
-                ", distance=" + distance+"km.";
+                ", price=" + String.format("%.2f", price) + "lv. " +
+                ", distance=" + distance + "km.";
     }
 }

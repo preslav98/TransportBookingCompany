@@ -1,8 +1,6 @@
 package com.endava.vehicle.train;
 
-import com.endava.enums.Brand;
 import com.endava.vehicle.Vehicle;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 
@@ -23,10 +21,10 @@ public class Train extends Vehicle {
                 == 0 && getBrand() == vehicle.getBrand();
     }
 
-        @Override
+    @Override
     public final int hashCode() {
-        return  Objects.hash(super.getBrand(), super.getCapacity(), super.getFuelUsage());
-        }
+        return Objects.hash(super.getBrand(), super.getCapacity(), super.getFuelUsage());
+    }
 
 }
 

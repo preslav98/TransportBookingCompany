@@ -1,6 +1,5 @@
 package com.endava.vehicle;
 
-import com.endava.vehicle.Vehicle;
 import com.endava.vehicle.bus.Bus;
 import com.endava.vehicle.car.Car;
 import com.endava.vehicle.plane.Plane;
@@ -14,7 +13,7 @@ public class VehiclePOJOFactory {
     public static Vehicle createBus(String thePathName) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         Vehicle bus = objectMapper.readValue(new File(thePathName), Bus.class);
-       return bus;
+        return bus;
     }
 
     public static Vehicle createCar(String thePathName) throws IOException {
